@@ -3,17 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Jaya Rajput — Java Full Stack Developer</title>
-  <meta name="description" content="Portfolio of Jaya Rajput — Java Full Stack Developer (Spring Boot + React)">
+  <title>Jaya Umesh Singh — Java Full Stack Developer</title>
+  <meta name="description" content="Portfolio of Jaya Umesh Singh — Java Full Stack Developer (Spring Boot + React)">
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
   <style>
-    /* ==============================
-       THEME VARIABLES
-    =============================== */
     :root {
       --bg: #0b0f17;
       --card: #121827;
@@ -24,10 +21,6 @@
       --ring: #334155;
       --link: #93c5fd;
     }
-
-    /* ==============================
-       GLOBAL RESET
-    =============================== */
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: "Inter", system-ui, sans-serif;
@@ -39,70 +32,44 @@
     a:hover { text-decoration: underline; }
     .container { width: min(1100px, 92%); margin: 0 auto; }
 
-    /* ==============================
-       NAVBAR
-    =============================== */
-    .nav {
-      position: sticky; top: 0; z-index: 50;
-      background: rgba(11,15,23,0.8); backdrop-filter: blur(8px);
-      border-bottom: 1px solid rgba(148,163,184,0.15);
-    }
+    /* NAVBAR */
+    .nav { position: sticky; top: 0; z-index: 50; background: rgba(11,15,23,0.8); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(148,163,184,0.15); }
     .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
     .brand { font-weight: 800; }
     .brand b { background: linear-gradient(90deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; color: transparent; }
     .nav ul { display: flex; gap: 18px; list-style: none; }
-
-    /* Buttons */
     .nav a.btn { padding: 8px 14px; border-radius: 999px; border: 1px solid var(--ring); }
     .nav a.btn:hover { border-color: var(--accent); }
 
-    /* ==============================
-       HERO SECTION
-    =============================== */
+    /* HERO SECTION */
     .hero { padding: 72px 0 56px; display: grid; grid-template-columns: 1.6fr 1fr; gap: 28px; align-items: center; }
     .hero h1 { font-size: clamp(32px, 5vw, 54px); margin-bottom: 10px; }
     .hero p.lead { font-size: clamp(16px, 2.2vw, 20px); color: var(--muted); margin-bottom: 22px; }
-
-    /* Hero right card */
-    .hero-card { background: linear-gradient(180deg, rgba(139,92,246,0.08), rgba(34,211,238,0.06));
-      border: 1px solid rgba(148,163,184,0.15); border-radius: 18px; padding: 22px; }
-
-    /* Badges */
+    .hero-card { background: linear-gradient(180deg, rgba(139,92,246,0.08), rgba(34,211,238,0.06)); border: 1px solid rgba(148,163,184,0.15); border-radius: 18px; padding: 22px; }
     .badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
     .badge { padding: 6px 10px; border: 1px solid var(--ring); border-radius: 999px; font-size: 12px; color: var(--muted); }
-
-    /* Call to action buttons */
     .cta { display: flex; gap: 10px; align-items: center; }
     .btn-primary { background: linear-gradient(90deg, var(--accent), var(--accent-2)); color: #0b0f17; font-weight: 700; padding: 12px 18px; border-radius: 12px; cursor: pointer; }
     .btn-ghost { background: transparent; border: 1px solid var(--ring); color: var(--text); padding: 12px 18px; border-radius: 12px; cursor: pointer; }
 
-    /* ==============================
-       SECTIONS + CARDS
-    =============================== */
+    /* SECTIONS + CARDS */
     section { padding: 56px 0; }
     .section-title { font-size: 22px; letter-spacing: 0.6px; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
-
     .grid { display: grid; gap: 18px; }
     .grid-2 { grid-template-columns: repeat(2, 1fr); }
     .grid-3 { grid-template-columns: repeat(3, 1fr); }
-
     .card { background: var(--card); border: 1px solid rgba(148,163,184,0.12); border-radius: 16px; padding: 18px; }
     .card h3 { margin-bottom: 6px; font-size: 18px; }
 
-    /* ==============================
-       TIMELINE
-    =============================== */
+    /* TIMELINE */
     .timeline { position: relative; }
     .timeline::before { content: ""; position: absolute; left: 10px; top: 0; bottom: 0; width: 2px; background: rgba(148,163,184,0.2); }
     .t-item { position: relative; padding-left: 36px; margin-bottom: 18px; }
     .t-item::before { content: ""; position: absolute; left: 4px; top: 6px; width: 14px; height: 14px; border-radius: 50%; background: linear-gradient(90deg, var(--accent), var(--accent-2)); }
 
-    /* ==============================
-       FOOTER
-    =============================== */
+    /* FOOTER */
     footer { padding: 28px 0 56px; color: var(--muted); border-top: 1px solid rgba(148,163,184,0.15); }
 
-    /* Responsive */
     @media (max-width: 900px) {
       .hero { grid-template-columns: 1fr; }
       .grid-2, .grid-3 { grid-template-columns: 1fr; }
@@ -110,12 +77,11 @@
   </style>
 </head>
 <body>
-  <!-- ==============================
-       NAVBAR
-  =============================== -->
+
+  <!-- NAVBAR -->
   <nav class="nav">
     <div class="container nav-inner">
-      <div class="brand">Jaya <b>Rajput</b></div>
+      <div class="brand">Jaya <b>Umesh </b><b>Singh</b></div>
       <ul>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -126,9 +92,7 @@
     </div>
   </nav>
 
-  <!-- ==============================
-       HERO SECTION
-  =============================== -->
+  <!-- HERO SECTION -->
   <header class="container hero">
     <div>
       <h1>Java Full-Stack Developer</h1>
@@ -144,60 +108,54 @@
         <span class="badge">REST APIs</span>
         <span class="badge">Java</span>
         <span class="badge">Git/GitHub</span>
+        <span class="badge">LeetCode</span>
+        <span class="badge">Udemy Courses</span>
       </div>
     </div>
 
-    <!-- Quick Info Card -->
     <div class="hero-card">
       <h3>Quick Info</h3>
       <div class="meta">
         <span>📍 Gurgaon, India</span>
-        <span>🎓 B.Tech (CS) — 2025</span>
+        <span>🎓 B.Tech (CS) — 2026</span>
         <span>💼 Open to Java Full-Stack roles</span>
         <span>✉️ jayar9009@gmail.com</span>
         <span>📞 8287020600</span>
       </div>
-      <p style="margin-top:10px; color: var(--muted)">I specialize in backend APIs, UI development, and real-world integrations (e.g. Paytm API, authentication systems).</p>
-      <div style="display:flex; gap:10px; margin-top: 8px;">
+      <p style="margin-top:10px; color: var(--muted)">I specialize in backend APIs, UI development, and real-world integrations (Paytm API, authentication systems).</p>
+      <div style="display:flex; flex-wrap: wrap; gap:10px; margin-top: 8px;">
         <a class="btn" href="#resume">Download CV</a>
-        <a class="btn" href="https://github.com/" target="_blank">GitHub</a>
-        <a class="btn" href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+        <a class="btn" href="https://github.com/jaya759" target="_blank">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/jaya-a99470310/" target="_blank">LinkedIn</a>
+        <a class="btn" href="https://leetcode.com/u/jayarajput01/" target="_blank">LeetCode</a>
+        <a class="btn" href="https://www.udemy.com/course/java-programming-tutorial-for-beginners/" target="_blank">Udemy Course</a>
       </div>
     </div>
   </header>
 
-  <!-- ==============================
-       PROJECTS SECTION
-  =============================== -->
+  <!-- PROJECTS SECTION -->
   <section id="projects" class="container">
     <div class="section-title">Projects</div>
     <div class="grid grid-3">
-      <!-- Real world project #1 -->
       <article class="card">
         <h3>Event Ticket Booking System</h3>
-        <p>A full-stack platform with <b>React</b> frontend, <b>Spring Boot</b> backend, and <b>MySQL</b>. Features seat booking, authentication, and Paytm payment integration.</p>
+        <p>React frontend, Spring Boot backend, MySQL, seat booking, authentication, Paytm payment integration.</p>
         <div class="meta"><span>React</span><span>Spring Boot</span><span>MySQL</span><span>Paytm API</span></div>
       </article>
-
-      <!-- Real world project #2 -->
       <article class="card">
         <h3>Employee Management System</h3>
-        <p>Java desktop app (Swing + NetBeans) with CRUD operations, search, and role-based access, using MySQL database.</p>
+        <p>Java desktop app (Swing) with CRUD, search, role-based access using MySQL.</p>
         <div class="meta"><span>Java</span><span>Swing</span><span>MySQL</span></div>
       </article>
-
-      <!-- Real world project #3 -->
       <article class="card">
         <h3>E-Commerce Web Platform</h3>
-        <p>Full-stack Java app with Spring Boot backend, React frontend, JWT authentication, and MySQL database. Includes shopping cart, payments, and order tracking.</p>
+        <p>Full-stack app with Spring Boot backend, React frontend, JWT authentication, MySQL, shopping cart, payments.</p>
         <div class="meta"><span>React</span><span>Spring Boot</span><span>JWT</span><span>MySQL</span></div>
       </article>
     </div>
   </section>
 
-  <!-- ==============================
-       SKILLS
-  =============================== -->
+  <!-- SKILLS -->
   <section id="skills" class="container">
     <div class="section-title">Skills</div>
     <div class="grid grid-3">
@@ -228,15 +186,13 @@
     </div>
   </section>
 
-  <!-- ==============================
-       EXPERIENCE
-  =============================== -->
+  <!-- EXPERIENCE -->
   <section id="experience" class="container">
     <div class="section-title">Experience</div>
     <div class="timeline">
       <div class="t-item card">
         <h3>Java Developer Intern — Avance Globaltech</h3>
-        <div class="meta"><span>Jun–Jul 2024 · 6 weeks</span> <span>Gurgaon</span></div>
+        <div class="meta"><span>Jun–Jul 2024 · 6 weeks</span> <span>Noida</span></div>
         <ul>
           <li>Developed REST APIs in Java and collaborated on API testing workflows.</li>
           <li>Optimized backend endpoints for performance and scalability.</li>
@@ -244,7 +200,7 @@
       </div>
       <div class="t-item card">
         <h3>API Testing Intern — Avance Globaltech</h3>
-        <div class="meta"><span>2024</span> <span>Gurgaon</span></div>
+        <div class="meta"><span>Dec 2024–Apr 2025 · 5 months</span> <span>Noida</span></div>
         <ul>
           <li>Created Postman collections, automated tests, and standardized reports.</li>
         </ul>
@@ -252,21 +208,17 @@
     </div>
   </section>
 
-  <!-- ==============================
-       EDUCATION
-  =============================== -->
+  <!-- EDUCATION -->
   <section id="education" class="container">
     <div class="section-title">Education</div>
     <div class="card">
       <h3>B.Tech in Computer Science</h3>
-      <div class="meta"><span>Graduating 2025</span> · <span>Gurgaon</span></div>
-      <p>Strong foundation in DSA, DBMS, OS, and Networks. Active in real-world full-stack projects.</p>
+      <div class="meta"><span>Graduating 2026</span> · <span>Gurgaon</span></div>
+      <p>Strong foundation in DSA, DBMS, OS, and Networks. Active in full-stack projects.</p>
     </div>
   </section>
 
-  <!-- ==============================
-       CONTACT FORM
-  =============================== -->
+  <!-- CONTACT -->
   <section id="contact" class="container">
     <div class="section-title">Contact</div>
     <div class="grid grid-2">
@@ -276,25 +228,20 @@
         <p>📧 <a href="mailto:jayar9009@gmail.com">jayar9009@gmail.com</a></p>
         <p>📱 <a href="tel:+918287020600">+91 82870 20600</a></p>
       </div>
-      <!-- Contact form -->
       <form class="card" onsubmit="event.preventDefault(); alert('Thanks! Your message has been noted.');">
         <label>Name<br/><input required type="text" placeholder="Your name" style="width:100%; padding:10px; border-radius:10px; border:1px solid var(--ring); background:transparent; color:var(--text);"></label><br/><br/>
         <label>Email<br/><input required type="email" placeholder="you@example.com" style="width:100%; padding:10px; border-radius:10px; border:1px solid var(--ring); background:transparent; color:var(--text);"></label><br/><br/>
-        <label>Message<br/>
-          <textarea required rows="4" placeholder="Tell me about your project..." style="width:100%; padding:10px; border-radius:10px; border:1px solid var(--ring); background:transparent; color:var(--text);"></textarea>
-        </label><br/>
+        <label>Message<br/><textarea required rows="4" placeholder="Tell me about your project..." style="width:100%; padding:10px; border-radius:10px; border:1px solid var(--ring); background:transparent; color:var(--text);"></textarea></label><br/>
         <button class="btn-primary" type="submit">Send Message</button>
       </form>
     </div>
   </section>
 
-  <!-- ==============================
-       FOOTER
-  =============================== -->
+  <!-- FOOTER -->
   <footer>
     <div class="container">
       <div style="display:flex; align-items:center; justify-content:space-between; gap: 12px; flex-wrap: wrap;">
-        <small>© <span id="year"></span> Jaya Rajput. All rights reserved.</small>
+        <small>© <span id="year"></span> Jaya Umesh Singh. All rights reserved.</small>
         <div class="meta">
           <a href="#">Privacy</a>
           <a href="#">Terms</a>
@@ -305,14 +252,7 @@
   </footer>
 
   <script>
-    // ==============================
-    // JS: Auto set current year
-    // ==============================
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // ==============================
-    // JS: Smooth scrolling
-    // ==============================
     document.querySelectorAll('a[href^="#"]').forEach(a=>{
       a.addEventListener('click', e=>{
         const target = document.querySelector(a.getAttribute('href'));
